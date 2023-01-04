@@ -34,7 +34,7 @@ public class BrowserStackSample {
         
     	// Set other BrowserStack capabilities
     	caps.setCapability("project", "First Java Project");
-    	caps.setCapability("build", "hello");
+    	caps.setCapability("build", System.getenv("BROWSERSTACK_BUILD_NAME"));
     	caps.setCapability("name", "first_test");
        
     	
