@@ -18,6 +18,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class BrowserStackSample {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+	
+	
 		
     	DesiredCapabilities caps = new DesiredCapabilities();
     	
@@ -34,8 +36,11 @@ public class BrowserStackSample {
         
     	// Set other BrowserStack capabilities
     	caps.setCapability("project", "First Java Project");
-    	caps.setCapability("build", System.getenv("BROWSERSTACK_BUILD_NAME"));
+    	caps.setCapability("build", System.getenv("BROWSERSTACK_BUILD_NAME").trim());
     	caps.setCapability("name", "first_test");
+	
+	
+	System.out.println(System.getenv("HELOOOOOOOOOOOOOOO -- " + "BROWSERSTACK_BUILD_NAME"));
        
     	
     	// Initialise the remote Webdriver using BrowserStack remote URL
